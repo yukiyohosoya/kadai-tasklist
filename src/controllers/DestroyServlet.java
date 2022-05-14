@@ -1,7 +1,6 @@
 package controllers;
 
 import java.io.IOException;
-import java.sql.Timestamp;
 
 import javax.persistence.EntityManager;
 import javax.servlet.ServletException;
@@ -38,6 +37,7 @@ public class DestroyServlet extends HttpServlet {
             em.getTransaction().begin();
             em.remove(t);//削除実行
             em.getTransaction().commit();//削除のコミット
+            request.getSession().setAttribute("flush", "削除が完了しました。");
             em.close();
 
 
