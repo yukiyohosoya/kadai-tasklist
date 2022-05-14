@@ -5,13 +5,13 @@
 		<class>models.Task</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/message_board?useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf8&amp;allowPublicKeyRetrieval=true"/>
-			<property name="javax.persistence.jdbc.user" value="tasksuser"/>
-			<property name="javax.persistence.jdbc.password" value="taskspass"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/kadai_task?useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf8&amp;allowPublicKeyRetrieval=true"/>
+			<property name="javax.persistence.jdbc.user" value="ktuser"/>
 			<property name="javax.persistence.schema-generation.database.action" value="create"/>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
 			<property name="hibernate.show_sql" value="true"/>
 			<property name="hibernate.format_sql" value="true"/>
+			<property name="javax.persistence.jdbc.password" value="ktpass"/>
 		</properties>
 	</persistence-unit>
 </persistence>

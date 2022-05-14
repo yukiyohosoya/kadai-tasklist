@@ -9,16 +9,27 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+
+
 @Entity
+@NamedQueries({
+    @NamedQuery(
+            name="getALLTask",
+            query = "SELECT t FROM Task AS t ORDER BY t.id DESC"
+            )
+})
+
 @Table(name="tasks")
 
 public class Task {
     @Id
-    @Column(name= "id")
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name="content",length=255, nullable=false)
+    @Column(name = "content", length = 255, nullable = false)
     private String content;
 
     @Column(name = "created_at", nullable = false)
